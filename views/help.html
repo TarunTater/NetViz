@@ -1,0 +1,65 @@
+<div class="main_container" ng-controller="NodeCtrl" ng-app="app">
+   <div class="container" style="text-align: justify;">
+
+        <h3>Description</h3>
+        <p>This application can be used for visualizing the stock-flow data related to any network. Given the network information (nodes and edges), geo-references of each node (latitude and longitude) and the stock and flow data, the application renders a topologically correct visualization of the network.</p>
+        <h3>Choose Database</h3>
+        <p>You give a name to your visualization and your database. On creating a new database, it automatically gets stored in the database server. Once a database is created, it can be used again by selecting it from the drop down menu until you delete it permanently.</p>
+        <h3>Nodes</h3>
+        <p>Initially, this is an almost empty page with just input boxes to add nodes and related data. You can either add each node manually through the input boxes or you can upload them in bulk in the form of a CSV file.</p>
+
+        <p>If you want to upload a file, click on the "Choose File" button, select the input file, click on "OK" and then click the "Upload" button.</p>
+
+        <p>If you want to manually add nodes, enter the nodeID (integer), node name (string), latitude (float/double), longitude (float/double) and the stock value (integer) in the respective input boxes. Once all the required data is added, click on the "Add Node" button.</p>
+
+        <p>After the data is added and the "Upload" or the "Add Node" button is clicked and if the data is in the specified format, the page will automatically get refreshed and you can see all the nodes added and the data related to them.</p>
+
+        <p>You can edit any node at any time or remove it by clicking on the "Edit" or "Remove" button respectively. If you choose to edit, the data related to the node that you want to edit gets populated in the input boxes. After making the desired changes, click on "Update" button. In case after clicking the edit button, you do not want to make any changes, just click the "Clear" button to empty the input boxes.</p>
+
+        <h3>Edges</h3>
+
+        <p>The edges tab is quite similar to the nodes tab. The only difference is the input data format. Here, you need to give an edgeID (integer), the nodeIDs (integer) of the nodes that the edge connects. Here, the nodeIDs have to be corresponding to those given in the nodes tab. Also, you need to give the flow(integer) value corresponding to the edge.</p>
+
+        <p>Rest of the functionalities for adding, editing or removing edges are identical to those for nodes.</p>
+
+        <h3>Visualization</h3>
+
+        <p>Once you are done adding the nodes and edges the data is ready to be visualized! Go to the "Visualize" tab. Cannot see any visulaization? Not to worrry! Click on the "Visualize" button and voila!</p>
+
+        <h3>Options</h3>
+
+        <p>On the top right side of the page, you should be able to see an options box. Here, you can choose or change various aspects of the visualization. The various options available to you are:</p>
+
+        <ul>
+            <li><b>Node Color:</b> You can change the color of your nodes. You can choose any color available in the drop-down. Default color is set to “Black” and the option "None" corresponds to nodes having only border but no fill.</li>
+            &nbsp;
+            
+            <li><b>Node Shape:</b> You can even choose the shape used to represent your nodes. You have a choice between representing them as circles or as squares.</li>
+            &nbsp;
+
+            <li><b>Edge Color:</b> You can change the color of the edges too. Default is set to "Black".</li>
+            &nbsp;
+
+            <li><b>Background Color:</b> You can set the background color of the visualization to any of those available in the drop down. The default color is set to "White".</li>
+            &nbsp;
+
+            <li><b>Flow Representation:</b> You can choose how the flow data is represented in the visualization. It can either be represented as the thickness (Thickness) of the edge or as weights of the edges (Labels). Default is set to "Labels". You can also personalize the color of the label. Default color is set to "Black". If you choose to represent flow by labels then the edges are represented as follows: 
+            <ul>
+                &nbsp;
+                <li>low range flow values - dotted line</li>&nbsp;
+                <li>mid range flow values - dashed line</li>&nbsp;
+                <li>high range flow values - solid line</li>&nbsp;
+            </ul>
+            </li>
+            &nbsp;
+
+            <li><b>Save:</b> You can save your choices for the options by clicking the "Save" button. Therefore, if you log out of the application and log in again later, your earlier chosen options for node color, edge color, etc are not lost.</li>
+            &nbsp;
+
+            <li><b>Zoom:</b> You can zoom in and out of the visualization by placing the cursor on top of the visualization window and scrolling up or down respectively.</li>
+            
+        </ul>
+
+   </div>
+</div>
+                    

@@ -1,0 +1,16 @@
+body {
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 20px;
+  font: 14px "Lucida Grande";
+}
+
+a {
+  color: #00B7FF;
+}
+
+.main_container{
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}

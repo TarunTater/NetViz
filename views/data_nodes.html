@@ -1,0 +1,41 @@
+<div class="main_container" ng-controller="NodeCtrl" ng-app="app">
+    <div ng-include="'views/data_file.html'"></div>
+    <div class="sample">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Stock</th>
+                    <th>Add/Remove</th>
+                    <th>Update/Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <form name="form_addNode">
+                    <tr>
+                        <td><input class="form-control" ng-model="node.nodeId" required></input></td>
+                        <td><input class="form-control" ng-model="node.nodeName" required></input></td>
+                        <td><input class="form-control" ng-model="node.lat" required></input></td>
+                        <td><input class="form-control" ng-model="node.long" required></input></td>
+                        <td><input class="form-control" ng-model="node.stock"></input></td>
+                        <td><button class="btn btn-primary" ng-click="addNode()">Add Node</button></td>
+                        <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td>
+                    </tr>
+                </form>
+                <tr ng-repeat="node in nodelist">
+                    <td>{{node.nodeId}}</td>
+                    <td>{{node.nodeName}}</td>
+                    <td>{{node.lat}}</td>
+                    <td>{{node.long}}</td>
+                    <td>{{node.stock}}</td>
+                    <td><button class="btn btn-danger" ng-click="remove(node.nodeId)">Remove</button></td>
+                    <td><button class="btn btn-warning" ng-click="edit(node.nodeId)">Edit</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+                    

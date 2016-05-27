@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<title>NetViz</title>
+
+	<!-- CSS -->
+
+	<link rel="stylesheet" href="assests/stylesheets/ngDialog.css">
+	<link rel="stylesheet" href="assests/stylesheets/ngDialog-theme-default.css">	
+	<link rel="stylesheet" href="assests/stylesheets/style.css">
+
+
+   <!-- <link rel="stylesheet" href="assets/css/data.css"> -->
+        
+
+</head>
+<body ng-app="app" ng-controller="PopUpNodeCtrl">
+	<script type="text/ng-template" id="firstDialogId">
+	<div class="ngdialog-message">
+		<h3>Choose Database</h3>
+		<h5>Create New:</h5>
+		<input class="form-control" ng-model="db.newDbName"></input>
+		<h5>Choose From Existing:</h5>
+		 
+		 <select name="dbSelect" id="dbSelect" ng-model="data.selectedOption" ng-options="option for option in data.availableOptions">
+    	</select>
+    	<p ng-show="error" class="alert alert-danger" style="color:#000000">{{error}}</p>
+	</div>
+
+	<div class="ngdialog-buttons">
+		<button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="createNew()">Create</button> &nbsp;&nbsp;&nbsp;
+		<button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="useExisting()">Choose</button>
+	</div>
+</script>
+
+
+	<div class="main_container" ng-cloak>
+		<h1>NetViz</h1>
+		<tabs>
+        	<pane title="Nodes">
+				<!--<div class="sample" ng-controller="NodeCtrl">	
+				<p>Lalla</p>
+				</div> -->
+
+
+				<div ng-include="'views/data_nodes.html'"></div>
+			</pane>
+
+			<pane title="Edges">
+				<!-- <div class="sample" ng-controller="EdgeCtrl">
+					<p>Palala</p>
+				</div> -->
+				<div ng-include="'views/data_edges.html'"></div>
+			</pane>
+		</tabs>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+
+<script type="text/javascript" src="node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+<script type="text/javascript" src="node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+<script type="text/javascript" src="node_modules/ng-dialog/js/ngDialog.js"></script>
+<script type="text/javascript" src="node_modules/ng-dialog/js/ngDialog.min.js"></script>
+
+<script src="controllers/controller.js"></script>
+</body>
+</html>

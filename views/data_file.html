@@ -1,0 +1,12 @@
+<div class="main_container">
+<div class="sample" id="fileUploader">
+        <br>
+        <span><h4><b>Upload File</b></h4></span>
+        
+        <span><input type="file" ngf-select ng-model="csvFile" name="file" accept=".csv" on-read-file="saveContent($fileContent)"></input></span>
+        <br>
+        <button class="btn btn-primary" type="submit" ng-click="onFileSelect(csvFile)">Upload</button>
+        <br><br>
+ </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+head, body {
+    height: 100%;
+    width: 100%;
+}
+
+svg {
+    height: 100%;
+    width: 100%;
+}
+
+.holder {
+    height: 100%;
+    width: 100%;
+}
+
+.table {
+}
+
+.statistics{
+    border-style: solid;
+}
+
+#canvas {
+
+    height: 900px;
+    width: 75%;
+    border-style: solid;
+    float: left;
+}
+
+.title {
+    text-align: center;
+}
+
+.details {
+    font-size: 16px;
+}
+
+#options {
+    height: 900px;
+    width: 25%;
+    border-style: solid;
+    float: right;
+}
+
+button {
+    
+}
+
+.d3-tip {
+    line-height: 1;
+    font-weight: normal;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+    font-size: 12px;
+}
+
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+}

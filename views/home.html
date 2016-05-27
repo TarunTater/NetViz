@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" src="assests/d3/d3.v3.js"></script>
+	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<title>NetViz</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="assests/stylesheets/ngDialog.css">
+	<link rel="stylesheet" href="assests/stylesheets/ngDialog-theme-default.css">
+	<link rel="stylesheet" href="assests/stylesheets/style.css">
+
+   <!-- <link rel="stylesheet" href="assets/css/data.css"> -->
+        
+
+</head>
+<body ng-app="app">
+	<h1>NetViz</h1>
+	<div class="main_container" ng-cloak>
+		
+		<tabs>
+        	<pane title="Nodes">
+				<!--<div class="sample" ng-controller="NodeCtrl">	
+				<p>Lalla</p>
+				</div> -->
+
+
+				<div ng-include="'views/data_nodes.html'"></div>
+			</pane>
+
+			<pane title="Edges">
+				<!-- <div class="sample" ng-controller="EdgeCtrl">
+					<p>Palala</p>
+				</div> -->
+				<div ng-include="'views/data_edges.html'"></div>
+			</pane>
+
+			<pane title="Visualization">
+				<!-- <div class="sample" ng-controller="EdgeCtrl">
+					<p>Palala</p>
+				</div> -->
+				<div ng-include="'views/visualization.html'"></div>
+			</pane>
+
+			<pane title="Help">
+				<div ng-include="'views/help.html'"></div>
+			</pane>
+
+		</tabs>
+
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+
+<script type="text/javascript" src="node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+<script type="text/javascript" src="node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+<script type="text/javascript" src="node_modules/ng-dialog/js/ngDialog.js"></script>
+<script type="text/javascript" src="node_modules/ng-dialog/js/ngDialog.min.js"></script>
+
+<script src="controllers/controller.js"></script>
+</body>
+</html>
